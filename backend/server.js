@@ -10,5 +10,5 @@ app.use(express.json());
 // Local dev uses the same handler as Vercel
 app.get('/api/data', handleDataRequest);
 
-const port = process.env.PORT || 5000;
+const port = process.env.PORT || 5050;
 app.listen(port, () => console.log(`API listening on http://localhost:${port}`));
