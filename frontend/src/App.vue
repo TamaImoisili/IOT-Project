@@ -12,7 +12,7 @@ let refreshTimer = null
 
 async function fetchData() {
   try {
-    const apiUrl = import.meta.env.VITE_API_URL || 'http://localhost:5050'
+    const apiUrl = import.meta.env.VITE_API_URL || 'https://iot-project-tama-imoisilis-projects.vercel.app'
     const res = await axios.get(`${apiUrl}/api/data?limit=300`)
     console.log(res.data)
     rows.value = res.data?.data || []
