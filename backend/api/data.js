@@ -6,7 +6,12 @@ const supabase = createClient(process.env.SUPABASE_URL, process.env.SUPABASE_SER
 async function handler(req, res) {
 	// Basic CORS for both Vercel and local
 	const origin = req.headers.origin;
-	if (origin) {
+	const allowedOrigins = new Set([
+		'https://tamaimoisili.github.io',
+		'http://localhost:5173',
+		'http://localhost:5050'
+	]);
+	if (origin && allowedOrigins.has(origin)) {
 		res.setHeader('Access-Control-Allow-Origin', origin);
 		res.setHeader('Access-Control-Allow-Credentials', 'true');
 		res.setHeader('Vary', 'Origin');
