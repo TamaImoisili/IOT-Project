@@ -2,7 +2,7 @@
 
 Goal:
 
-This demo project displays Raspberry Pi system metrics on a live dashboard. It pulls data from an API and renders charts, status, and a raw data log for quick monitoring.
+This demo project displays metrics from my personal Raspberry Pi system on a live dashboard. It sends this data to supabase using python and supabase's 
 
 API usage:
 
