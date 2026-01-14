@@ -2,11 +2,15 @@
 
 Goal:
 
-This demo project displays metrics from my personal Raspberry Pi system on a live dashboard. It sends this data to supabase using python and supabase's 
+This demo project displays metrics from my personal Raspberry Pi system on a live dashboard. It obtains the data from the system in a python script then in this same script it sends that data to supabase. This script is designed and set to run as a service so it continuosly post updated data to supabase.
 
 API usage:
 
-The frontend requests metrics from `/api/data` on a regular interval and on manual refresh. The backend reads from Supabase and returns the latest rows for the dashboard.
+The frontend requests metrics from `/api/data` on a regular interval and on manual refresh from my backend hosted on vercel. The backend makes a get request to supabase and sends this data back to the front end to be displayed.
+
+Frameworks used:
+Frontend: vue.
+Backend: Express.js.
 
 Local development:
 1) Create `frontend/.env.local` with `VITE_API_URL=http://localhost:5050`
